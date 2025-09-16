@@ -1,7 +1,7 @@
 # DevSocial
 
 
-# devSocial - Backend ✨
+## devSocial - Backend ✨
 
 This is the backend server for **devSocial**, a social hub for developers designed to showcase GitHub projects, foster collaboration, and provide AI-powered insights. This server handles user authentication, data management, and the core business logic for the platform.
 
