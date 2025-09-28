@@ -122,6 +122,7 @@ Here is a list of the currently available API endpoints.
 
 The project follows a feature-based, separation-of-concerns structure to ensure scalability and maintainability.
 
+```bash
 /src
 ├── api/             # API routes, controllers, and middlewares
 ├── config/          # Configuration files (DB, Passport)
@@ -129,6 +130,7 @@ The project follows a feature-based, separation-of-concerns structure to ensure 
 ├── services/        # Business logic for external APIs
 └── utils/           # Utility and helper functions
 
+```
 
 -   **`src/api/`**: This is the core of the API layer, handling all HTTP requests.
     -   **`routes/`**: Defines all API endpoints and maps them to the appropriate controller functions.
