@@ -14,6 +14,9 @@ passport.use(new GitHubStrategy({
 
             if (user) {
                 // If user exists, pass the user object to the next middleware
+                user.accessToken = accessToken;
+                await user.save();
+                console.log('User found and token updated.');
                 return done(null, user);
             } else {
                 // If not, create a new user in our database
@@ -22,7 +25,8 @@ passport.use(new GitHubStrategy({
                     username: profile.username,
                     displayName: profile.displayName || profile.username,
                     avatarUrl: profile.photos[0].value,
-                    profileUrl: profile.profileUrl
+                    profileUrl: profile.profileUrl,
+                    accessToken: accessToken,
                 });
                 await newUser.save();
                 return done(null, newUser);
