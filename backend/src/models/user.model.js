@@ -20,6 +20,10 @@ const userSchema = new mongoose.Schema({
     profileUrl: {
         type: String,
     },
+    accessToken: {
+        type: String,
+        required: true,
+    },
 }, {
     timestamps: true // Adds createdAt and updatedAt fields
 });
